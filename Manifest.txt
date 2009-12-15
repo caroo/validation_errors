@@ -1,0 +1,13 @@
+.rake_tasks~
+History.txt
+Manifest.txt
+PostInstall.txt
+README.rdoc
+Rakefile
+lib/validation_errors.rb
+lib/validation_errors/helpers/validation_errors_helper.rb
+script/console
+script/destroy
+script/generate
+test/test_helper.rb
+test/test_validation_errors.rb

@@ -1,0 +1,7 @@
+
+For more information on validation_errors, see http://validation_errors.rubyforge.org
+
+NOTE: Change this information in PostInstall.txt 
+You can also delete it if you don't want it.
+
+
