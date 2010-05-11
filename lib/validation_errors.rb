@@ -4,5 +4,5 @@ $:.unshift(File.dirname(__FILE__)) unless
 File.join(File.dirname(__FILE__), *%w[.. validation_errors helpers validation_error_helper])
 
 module ValidationErrors
-  VERSION = '0.0.1'
+  VERSION = '0.1.0'
 end
