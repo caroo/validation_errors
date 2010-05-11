@@ -2,16 +2,16 @@
 
 Gem::Specification.new do |s|
   s.name = %q{validation_errors}
-  s.version = "0.0.1"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["pkw.de dev team"]
   s.date = %q{2009-12-15}
-  s.description = %q{Generates markup for validation errors}
+  s.description = %q{Generates markup for validation errors and offers helper methods for creating them}
   s.email = ["dev@pkw.de"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc"]
-  s.files = [".rake_tasks~", "History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/validation_errors.rb", "lib/validation_errors/helpers/validation_errors_helper.rb", "script/console", "script/destroy", "script/generate", "test/test_helper.rb", "test/test_validation_errors.rb"]
-  s.homepage = %q{pkw.de}
+  s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/validation_errors.rb", "lib/validation_errors/helpers/validation_errors_helper.rb", "script/console", "script/destroy", "script/generate", "test/test_helper.rb", "test/test_validation_errors.rb"]
+  s.homepage = %q{http://pkw.de}
   s.post_install_message = %q{PostInstall.txt}
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
