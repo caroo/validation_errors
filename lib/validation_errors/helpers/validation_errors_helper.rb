@@ -24,15 +24,15 @@ module ValidationErrors
             "#{t(attribute.last, :scope => [:activerecord, :attributes, attribute.size == 1 ?  object.class.name.underscore : attribute[-2]])} #{error}"
           end
         end
-
+        
         return error_container(:class => [options[:class], attribute.last].compact.join(" ")) do
-          error_messages.each do |error_message|
+          error_messages.map do |error_message|
             content_tag('li') do
-              content_tag('label', :class => 'error', :generated => true, :style => "display:block;", :for => "#{object.class.name.underscore}_#{options[:for] ? options[:for] : attribute.join('_')}") do
+              content_tag('label', {:class => 'error', :generated => true, :style => "display:block;", :for => ("#{object.class.name.underscore}_#{options[:for] ? options[:for] : attribute.join('_')}")}) do
                 error_message
               end
             end
-          end
+          end.to_s
         end
       end
       
