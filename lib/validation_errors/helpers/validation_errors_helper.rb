@@ -16,7 +16,6 @@ module ValidationErrors
         options.symbolize_keys!
         attribute = [attribute].flatten
         errors = errors_for_path(object, attribute)
-        
         error_messages = if !options[:translate_attribute].nil? && options[:translate_attribute] == false
           errors
         else
@@ -24,8 +23,11 @@ module ValidationErrors
             "#{t(attribute.last, :scope => [:activerecord, :attributes, attribute.size == 1 ?  object.class.name.underscore : attribute[-2]])} #{error}"
           end
         end
-        
-        return error_container(:class => [options[:class], attribute.last].compact.join(" ")) do
+        container_html_options = {
+          :class => [options[:class], attribute.last].compact.join(" "),
+        }
+        container_html_options.merge!(:style => "display:none") if error_messages.blank?
+        return error_container(container_html_options) do
           error_messages.map do |error_message|
             content_tag('li') do
               content_tag('label', {:class => 'error', :generated => true, :style => "display:block;", :for => ("#{object.class.name.underscore}_#{options[:for] ? options[:for] : attribute.join('_')}")}) do
